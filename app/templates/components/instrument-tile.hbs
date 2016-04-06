@@ -16,8 +16,16 @@
     {{instrument.category}}<br>
     {{instrument.description}}
   {{/md-card-reveal}}
-
   {{/md-card}}
+
+<ul>
+  {{#each instrument.feedbacks as |feedback|}}
+    <li>{{feedback.title}}</li>
+    <li>{{feedback.content}}</li>
+  {{/each}}
+</ul>
+
   <button class="btn" {{action 'delete' instrument}}>Delete</button>
   <button class='btn' {{action 'addToCart' instrument}}>Add to Cart</button>
   {{update-instrument instrument=instrument update='update'}}
+  {{new-feedback instrument=instrument saveFeedback="saveFeedback"}}

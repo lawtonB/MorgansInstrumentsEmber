@@ -6,5 +6,6 @@ export default DS.Model.extend({
   category: DS.attr(),
   condition: DS.attr(),
   image: DS.attr(),
-  description: DS.attr()
+  description: DS.attr(),
+  feedbacks: DS.hasMany('feedback', { async: true })
 });

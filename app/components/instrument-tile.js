@@ -14,6 +14,10 @@ export default Ember.Component.extend({
     },
     update(instrument, params) {
       this.sendAction('update', instrument, params);
+    },
+    saveFeedback(params) {
+      this.sendAction('saveFeedback', params);
     }
+
   }
 });

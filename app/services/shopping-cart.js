@@ -4,6 +4,6 @@ export default Ember.Service.extend({
   instruments: [],
 
   add(instrument) {
-    this.get('instruments').pushObject(instrument);
+    this.get('instruments').addObject(instrument);
   }
 });
