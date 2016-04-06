@@ -1,0 +1,5 @@
+{{#each model as |instrument|}}
+  {{instrument-tile instrument=instrument destroyInstrument='destroyInstrument'}}
+{{/each}}
+
+{{new-instrument saveInstrument='saveInstrument'}}
