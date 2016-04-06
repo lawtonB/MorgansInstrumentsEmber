@@ -8,7 +8,7 @@
 {{#md-card title=instrument.name
   image=instrument.image
   activator=true
-  id='card-reveal'}}
+  class='card-reveal'}}
 
   {{#md-card-reveal}}
     {{instrument.price}}<br>
@@ -19,3 +19,4 @@
 
   {{/md-card}}
   <button class="btn" {{action 'delete' instrument}}>Delete</button>
+  <button class='btn' {{action 'addToCart' instrument}}>Add to Cart</button>
