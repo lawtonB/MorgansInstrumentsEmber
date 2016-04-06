@@ -13,6 +13,10 @@ export default Ember.Route.extend({
   destroyInstrument(instrument) {
     instrument.destroyRecord();
     this.transitionTo('index');
+  },
+  update(instrument, params) {
+    instrument.save();
+    this.transitionTo('index');
   }
 }
 });

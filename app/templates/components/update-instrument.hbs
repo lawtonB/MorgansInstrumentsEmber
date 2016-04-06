@@ -1,0 +1,35 @@
+{{#if updateInstrumentForm}}
+<h5>update {{instrument.name}}</h5>
+<div class='row'>
+  <form>
+    <div class="form-group">
+      <label for="name">Instrument name</label>
+      {{input value=name id="name"}}
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      {{input value=price id="price"}}
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{input value=description id="description"}}
+    </div>
+    <div class="form-group">
+      <label for="condition">Condition</label>
+      {{input value=condition id="condition"}}
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      {{input value=category id="category"}}
+    </div>
+    <div class="form-group">
+      <label for="image">Image</label>
+      {{input value=image id="image"}}
+    </div>
+
+    <button {{action "update" instrument}}>save</button>
+  </form>
+</div>
+{{else}}
+  <a class="btn" {{action 'updateInstrumentForm'}}>Update</a>
+{{/if}}

@@ -11,6 +11,9 @@ export default Ember.Component.extend({
     },
     addToCart(instrument) {
       this.get('shoppingCart').add(instrument);
+    },
+    update(instrument, params) {
+      this.sendAction('update', instrument, params);
     }
   }
 });
