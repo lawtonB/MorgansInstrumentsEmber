@@ -1,2 +1,18 @@
 @import 'materialize';
 @import 'ember-cli-materialize';
+
+.card {
+  width: 250px;
+}
+
+.instruments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.new-instrument {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}

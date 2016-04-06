@@ -1,5 +1,8 @@
-{{#each model as |instrument|}}
+<div class="instruments">
+  {{#each model as |instrument|}}
   {{instrument-tile instrument=instrument destroyInstrument='destroyInstrument'}}
-{{/each}}
-
-{{new-instrument saveInstrument='saveInstrument'}}
+  {{/each}}
+</div>
+<div class="new-instrument">
+  {{new-instrument saveInstrument='saveInstrument'}}
+</div>
