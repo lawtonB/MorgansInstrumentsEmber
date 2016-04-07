@@ -27,9 +27,10 @@
       {{input value=image id="image"}}
     </div>
 
-    <button {{action "saveInstrument" }}>save</button>
+    <button class="btn" {{action "saveInstrument" }}>save</button>
+    <button class="btn" {{action 'hideInstrumentForm'}}>hide</button>
   </form>
 </div>
 {{else}}
-  <a class="btn" {{action 'instrumentFormShow'}}>New Instrument</a>
+  <a class="btn" {{action 'instrumentFormShow'}}>Add New Instrument</a>
 {{/if}}

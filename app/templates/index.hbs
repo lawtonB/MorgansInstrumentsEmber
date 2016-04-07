@@ -4,6 +4,10 @@
   {{instrument-tile instrument=instrument destroyInstrument='destroyInstrument' update='update' saveFeedback="saveFeedback"}}
   {{/each}}
 </div>
+{{#if session.isAuthenticated}}
 <div class="new-instrument">
   {{new-instrument saveInstrument='saveInstrument'}}
 </div>
+{{else}}
+Please sign in
+{{/if}}

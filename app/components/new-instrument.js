@@ -13,7 +13,7 @@ export default Ember.Component.extend({
         condition: this.get('condition'),
         description: this.get('description'),
         category: this.get('category'),
-        image: "/img/" + (this.get('image')) 
+        image: "/img/" + (this.get('image'))
       };
       this.set('name', "");
       this.set('price', "");
@@ -23,6 +23,9 @@ export default Ember.Component.extend({
       this.set('image', "");
       this.set('addNewInstrument', false);
       this.sendAction('saveInstrument', params);
+    },
+    hideInstrumentForm(){
+      this.set('addNewInstrument', false);
     }
   }
 });
