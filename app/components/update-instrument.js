@@ -16,7 +16,7 @@ export default Ember.Component.extend({
         image: "/img/" + (this.get('image'))
       };
       this.set('updateInstrumentForm', false);
-      this.sendAction('update', instrument, params)
+      this.sendAction('update', instrument, params);
     }
   }
 });
