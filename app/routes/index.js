@@ -34,6 +34,10 @@ export default Ember.Route.extend({
         return instrument.save();
       });
       this.transitionTo('index');
-    }
+    },
+    deleteFeedback(feedback) {
+      feedback.destroyRecord();
+      this.transitionTo('index');
+    },
   }
 });

@@ -1,7 +1,7 @@
 {{display-cart}}
 <div class="instruments">
   {{#each model.instruments as |instrument|}}
-  {{instrument-tile instrument=instrument destroyInstrument='destroyInstrument' update='update' saveFeedback="saveFeedback"}}
+  {{instrument-tile instrument=instrument destroyInstrument='destroyInstrument' update='update' saveFeedback="saveFeedback" deleteFeedback='deleteFeedback'}}
   {{/each}}
 </div>
 {{#if session.isAuthenticated}}

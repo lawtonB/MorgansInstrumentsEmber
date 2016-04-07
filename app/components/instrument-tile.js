@@ -17,6 +17,11 @@ export default Ember.Component.extend({
     },
     saveFeedback(params) {
       this.sendAction('saveFeedback', params);
+    },
+    deleteFeedback(feedback) {
+      if (confirm('delete feedback?')) {
+        this.sendAction('deleteFeedback', feedback);
+      }
     }
 
   }
