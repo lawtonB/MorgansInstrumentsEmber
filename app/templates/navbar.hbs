@@ -1,0 +1,20 @@
+{{#md-navbar name='morgans-instruments' class='grey darken-3'}}
+  {{#link-to 'index' tagName='li'}}
+    {{link-to 'Home' 'index'}}
+  {{/link-to}}
+
+
+  <a {{action 'showCart'}}><i class="material-icons">shopping_cart</i></a>
+
+  {{#if session.isAuthenticated}}
+
+    <a class='btn' {{action 'signOut'}}>Sign Out</a>
+  {{else}}
+  {{#link-to 'sign-up' tagName='li'}}
+    {{link-to 'sign-up' 'sign-up'}}
+  {{/link-to}}
+  {{#link-to 'sign-in' tagName='li'}}
+    {{link-to 'sign-in' 'sign-in'}}
+  {{/link-to}}
+  {{/if}}
+{{/md-navbar}}

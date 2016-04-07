@@ -1,4 +1,11 @@
-{{#each shoppingCart.instruments as |instrument|}}
-  {{instrument.name}} -- {{instrument.price}}<br>
-{{/each}}
-{{totalPrice}}
+<div class="row shopping-cart">
+  <div class='col s2'>
+  {{#each shoppingCart.instruments as |instrument|}}
+  <h5>{{instrument.name}}</h5>
+  ${{instrument.price}}<br>
+  {{/each}}
+</div>
+  <div class='total-display col s2'>
+  <h4>Your total: ${{totalPrice}}</h4>
+  </div>
+</div>

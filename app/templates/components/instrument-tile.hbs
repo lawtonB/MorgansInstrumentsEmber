@@ -15,6 +15,9 @@
     Condition: {{instrument.condition}}<br>
     {{instrument.category}}<br>
     {{instrument.description}}
+    {{#link-to 'instrument' instrument_id}}
+      View Instrument Details
+    {{/link-to}}
   {{/md-card-reveal}}
   {{/md-card}}
 
@@ -24,14 +27,13 @@
     <li>{{feedback.content}}</li>
   <button class="btn" {{action 'deleteFeedback' feedback}}>delete</button>
   {{/each}}
-
 </ul>
-
+{{#if session.isAuthenticated}}
+  {{update-instrument instrument=instrument update='update'}}
   <button class="btn" {{action 'delete' instrument}}>Delete</button>
-  <button class='btn' {{action 'addToCart' instrument}}>Add to Cart</button>
-  {{#if session.isAuthenticated}}
-    {{update-instrument instrument=instrument update='update'}}
-    {{new-feedback instrument=instrument saveFeedback="saveFeedback"}}
-  {{else}}
-    eh?
-  {{/if}}
+  {{new-feedback instrument=instrument saveFeedback="saveFeedback"}}
+<button class='btn' {{action 'addToCart' instrument}}>Add to Cart</button>
+{{else}}
+  {{new-feedback instrument=instrument saveFeedback="saveFeedback"}}
+<button class='btn' {{action 'addToCart' instrument}}>Add to Cart</button>
+{{/if}}

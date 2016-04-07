@@ -1,21 +1,4 @@
-{{#md-navbar name='morgans-instruments' class='grey darken-3'}}
-  {{#link-to 'index' tagName='li'}}
-    {{link-to 'Home' 'index'}}
-  {{/link-to}}
-
-  {{#if session.isAuthenticated}}
-    <button class='btn' {{action 'signOut'}}>Sign Out</button>
-  {{else}}
-  {{#link-to 'sign-up' tagName='li'}}
-    {{link-to 'sign-up' 'sign-up'}}
-  {{/link-to}}
-  {{#link-to 'sign-in' tagName='li'}}
-    {{link-to 'sign-in' 'sign-in'}}
-  {{/link-to}}
-  {{/if}}
-{{/md-navbar}}
-
-
+{{partial 'navbar'}}
 {{outlet}}
 
 {{!-- ember-cli-materialize modal container --}}

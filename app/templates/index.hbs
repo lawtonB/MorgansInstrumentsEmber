@@ -1,13 +1,15 @@
+{{#if cartIsShowing}}
 {{display-cart}}
+{{else}}
+<a class='btn' {{action 'showCart'}}><i class="material-icons">shopping_cart</i></a>
+{{/if}}
+
 <div class="instruments">
   {{#each model.instruments as |instrument|}}
-  {{instrument-tile instrument=instrument destroyInstrument='destroyInstrument' update='update' saveFeedback="saveFeedback" deleteFeedback='deleteFeedback'}}
+  {{instrument-tile instrument=instrument destroyInstrument='destroyInstrument' update='update' saveFeedback="saveFeedback" deleteFeedback='deleteFeedback' session=session}}
   {{/each}}
 </div>
-{{#if session.isAuthenticated}}
+
 <div class="new-instrument">
   {{new-instrument saveInstrument='saveInstrument'}}
 </div>
-{{else}}
-Please sign in
-{{/if}}

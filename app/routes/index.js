@@ -7,6 +7,7 @@ export default Ember.Route.extend({
       feedbacks: this.store.findAll('feedback')
     });
   },
+  cartIsShowing: false,
   actions: {
     saveInstrument(params) {
       var newInstrument = this.store.createRecord('instrument', params);
@@ -19,7 +20,7 @@ export default Ember.Route.extend({
     },
     update(instrument, params) {
       Object.keys(params).forEach(function(key) {
-        if(params[key]!==undefined && params[key]!==" ") {
+        if(params[key]!==undefined && params[key]!=="") {
           instrument.set(key,params[key]);
         }
       });
@@ -39,5 +40,10 @@ export default Ember.Route.extend({
       feedback.destroyRecord();
       this.transitionTo('index');
     },
+
+      showCart() {
+        this.set('cartIsShowing', true);
+      }
+
   }
 });

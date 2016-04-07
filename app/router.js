@@ -6,10 +6,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('instrument', {path: '/instrument/instrument_id'});
+  this.route('instrument', { path: '/instrument/instrument_id' });
   this.route('sign-up');
   this.route('sign-in');
   this.route('welcome');
+  this.authenticatedRoute('signed-in', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
