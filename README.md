@@ -1,7 +1,6 @@
 # Morgans-instruments
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This site demonstrates ability to create Ember JS projects that containg CRUD functionality, and login/user instrumentality for a commerce based website.
 
 ## Prerequisites
 
